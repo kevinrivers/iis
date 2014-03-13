@@ -18,8 +18,9 @@
 # limitations under the License.
 
 include_recipe "iis"
+include_recipe "webpi"
 
 webpi_product "UrlRewrite2" do
-  accept_eula node['iis']['accept_eula']
+  accept_eula true
   action :install
-en
+end
